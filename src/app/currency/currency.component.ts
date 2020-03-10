@@ -13,4 +13,8 @@ export class CurrencyComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getCurrencies() {
+    return ['USD', 'AUD', 'EUR'];
+  }
+
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-event-emitters',
@@ -7,7 +7,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class EventEmittersComponent implements OnInit {
 
-  constructor() {
+  totalVotes = 0;
+  voteChanged = new EventEmitter();
+
+  upVote() {
+    this.totalVotes++;
+    this.voteChanged.emit(this.totalVotes);
   }
 
   ngOnInit(): void {

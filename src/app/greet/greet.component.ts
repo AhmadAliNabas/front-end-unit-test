@@ -13,4 +13,8 @@ export class GreetComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  greet(name) {
+    return 'Welcome ' + name;
+  }
+
 }

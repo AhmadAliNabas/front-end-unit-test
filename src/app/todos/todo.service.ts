@@ -1,10 +1,23 @@
 import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
+  constructor(private http: HttpClient) {
+  }
 
-  constructor() {
+  add(todo) {
+    return this.http.post('...', todo);
+  }
+
+  getTodos(): Observable<any> {
+    return this.http.get('...');
+  }
+
+  delete(id) {
+    return this.http.delete('...');
   }
 }

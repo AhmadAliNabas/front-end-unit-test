@@ -22,4 +22,8 @@ describe('GreetComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should include the name in the message', () => {
+    expect(component.greet('ahmad')).toContain('ahmad');
+  })
 });
