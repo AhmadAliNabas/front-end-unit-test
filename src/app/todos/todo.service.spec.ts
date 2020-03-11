@@ -1,20 +1,20 @@
 import {TestBed} from '@angular/core/testing';
 
 import {TodoService} from './todo.service';
-import {HttpClient} from "@angular/common/http";
+import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
 
 describe('TodoService', () => {
   let service: TodoService;
-  let httpClient: HttpClient;
+  let httpMock: HttpTestingController;
+
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        // reference the new instance of formBuilder from above
-        {provide: HttpClient, useValue: httpClient}
-      ]
+      imports: [HttpClientTestingModule],
+      providers: []
     });
 
     service = TestBed.inject(TodoService);
+    httpMock = TestBed.inject(HttpTestingController);
   });
 
   it('should be created', () => {

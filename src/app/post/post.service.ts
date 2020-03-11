@@ -14,7 +14,7 @@ export interface Post {
 })
 
 export class PostService {
-  REST_API: string = 'https://jsonplaceholder.typicode.com/posts';
+  REST_API: string = '...';
 
   constructor(private http: HttpClient) {
   }
