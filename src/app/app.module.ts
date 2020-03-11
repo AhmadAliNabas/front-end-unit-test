@@ -3,14 +3,16 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ComputeComponent} from './compute/compute.component';
-import {CurrencyComponent} from './currency/currency.component';
-import {EventEmittersComponent} from './event-emitters/event-emitters.component';
-import {GreetComponent} from './greet/greet.component';
-import {TodoFormComponent} from './todo-form/todo-form.component';
-import {TodosComponent} from './todos/todos.component';
-import {VoteComponent} from './vote/vote.component';
-import {PostComponent} from './post/post.component';
+
+import {VoterComponent} from './integration-tests/voter/voter.component';
+import {ComputeComponent} from "./unit-tests/compute/compute.component";
+import {CurrencyComponent} from "./unit-tests/currency/currency.component";
+import {PostComponent} from "./unit-tests/post/post.component";
+import {VoteComponent} from "./unit-tests/vote/vote.component";
+import {TodosComponent} from "./unit-tests/todos/todos.component";
+import {TodoFormComponent} from "./unit-tests/todo-form/todo-form.component";
+import {GreetComponent} from "./unit-tests/greet/greet.component";
+import {EventEmittersComponent} from "./unit-tests/event-emitters/event-emitters.component";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {PostComponent} from './post/post.component';
     TodoFormComponent,
     TodosComponent,
     VoteComponent,
-    PostComponent
+    PostComponent,
+    VoterComponent
   ],
   imports: [
     BrowserModule,

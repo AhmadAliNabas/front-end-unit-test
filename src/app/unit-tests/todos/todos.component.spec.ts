@@ -3,13 +3,12 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {TodosComponent} from './todos.component';
 import {TodoService} from "./todo.service";
 import {Observable, of} from "rxjs";
-import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('TodosComponent', () => {
   let component: TodosComponent;
   let fixture: ComponentFixture<TodosComponent>;
   let service: TodoService;
-  let httpMock: HttpTestingController;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [TodosComponent],
@@ -19,7 +18,6 @@ describe('TodosComponent', () => {
     });
     service = TestBed.inject(TodoService);
     fixture = TestBed.createComponent(TodosComponent);
-    httpMock = TestBed.inject(HttpTestingController);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
@@ -41,10 +39,17 @@ describe('TodosComponent', () => {
     expect(component.todos).toBe(todos);
   });
 
-  it('should call the server to delete a todo item if the user confirms', () => {
+  xit('should call the server to delete a todo item if the user confirms', () => {
     spyOn(window, 'confirm').and.returnValue(true);
     let spy = spyOn(service, 'delete').and.returnValue(new Observable());
     component.delete(1);
-    expect(spy).toHaveBeenCalled();
+    expect(spy).toHaveBeenCalledWith(1);
+  });
+
+  xit('should NOT call the server to delete a todo item if the user cancels', () => {
+    spyOn(window, 'confirm').and.returnValue(false);
+    let spy = spyOn(service, 'delete').and.returnValue(new Observable());
+    component.delete(1);
+    expect(spy).not.toHaveBeenCalled();
   });
 });
