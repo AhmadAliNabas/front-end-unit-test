@@ -13,6 +13,7 @@ import {TodosComponent} from "./unit-tests/todos/todos.component";
 import {TodoFormComponent} from "./unit-tests/todo-form/todo-form.component";
 import {GreetComponent} from "./unit-tests/greet/greet.component";
 import {EventEmittersComponent} from "./unit-tests/event-emitters/event-emitters.component";
+import {GreeterComponent} from './integration-tests/greeter/greeter.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {EventEmittersComponent} from "./unit-tests/event-emitters/event-emitters
     TodosComponent,
     VoteComponent,
     PostComponent,
-    VoterComponent
+    VoterComponent,
+    GreeterComponent
   ],
   imports: [
     BrowserModule,

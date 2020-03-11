@@ -39,14 +39,14 @@ describe('TodosComponent', () => {
     expect(component.todos).toBe(todos);
   });
 
-  xit('should call the server to delete a todo item if the user confirms', () => {
+  it('should call the server to delete a todo item if the user confirms', () => {
     spyOn(window, 'confirm').and.returnValue(true);
     let spy = spyOn(service, 'delete').and.returnValue(new Observable());
     component.delete(1);
     expect(spy).toHaveBeenCalledWith(1);
   });
 
-  xit('should NOT call the server to delete a todo item if the user cancels', () => {
+  it('should NOT call the server to delete a todo item if the user cancels', () => {
     spyOn(window, 'confirm').and.returnValue(false);
     let spy = spyOn(service, 'delete').and.returnValue(new Observable());
     component.delete(1);
