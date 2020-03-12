@@ -35,7 +35,5 @@ describe('GreeterComponent', () => {
   // and we don't really need two beforeEach method
   // but I thought it would be nice to know.
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 });

@@ -19,9 +19,7 @@ describe('CurrencyComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 
   it('should return the supported currencies', () => {
     const arr = component.getCurrencies();

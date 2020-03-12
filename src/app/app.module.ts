@@ -17,6 +17,7 @@ import {GreeterComponent} from './integration-tests/greeter/greeter.component';
 import {UserDetailsComponent} from './integration-tests/user-details/user-details.component';
 import {UsersComponent} from './users/users.component';
 import {HomeComponent} from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {HomeComponent} from './home/home.component';
     GreeterComponent,
     UserDetailsComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

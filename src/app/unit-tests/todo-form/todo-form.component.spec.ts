@@ -24,9 +24,7 @@ describe('TodoFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 
   it('should create a from with 2 controls', () => {
     expect(component.form.contains('name')).toBeTruthy();

@@ -19,9 +19,7 @@ describe('ComputeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+
 
   it('should return 0 if input is negative', () => {
     const result = component.compute(-1);
