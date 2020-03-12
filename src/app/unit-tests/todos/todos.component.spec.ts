@@ -19,7 +19,7 @@ describe('TodosComponent', () => {
     service = TestBed.inject(TodoService);
     fixture = TestBed.createComponent(TodosComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture.detectChanges();
   }));
 
   it('should called add', () => {
@@ -30,7 +30,7 @@ describe('TodosComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should create', () => {
+  it('should call getTodos', () => {
     const todos = [1, 2, 3];
     spyOn(service, 'getTodos').and.callFake(() => {
       return of(todos);
@@ -52,4 +52,12 @@ describe('TodosComponent', () => {
     component.delete(1);
     expect(spy).not.toHaveBeenCalled();
   });
+
+  it('should load todos from the server', () => {
+    let todoService = TestBed.inject(TodoService);
+    spyOn(todoService, 'getTodos').and.returnValue(of([1, 2, 3]));
+    fixture.detectChanges();
+    expect(component.todos.length).toBe(3);
+  });
+
 });
