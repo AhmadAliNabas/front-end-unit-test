@@ -1,4 +1,4 @@
-import {UsersComponent} from "./users/users.component";
+import {UsersComponent} from "./empty-components/users/users.component";
 import {routes} from "./app-routing.module";
 
 describe('routes', () => {

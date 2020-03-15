@@ -8,16 +8,18 @@ import {ComputeComponent} from "./unit-tests/compute/compute.component";
 import {CurrencyComponent} from "./unit-tests/currency/currency.component";
 import {PostComponent} from "./unit-tests/post/post.component";
 import {VoteComponent} from "./unit-tests/vote/vote.component";
-import {TodosComponent} from "./unit-tests/todos/todos.component";
+import {TodosComponent} from "./integration-tests/todos/todos.component";
 import {TodoFormComponent} from "./unit-tests/todo-form/todo-form.component";
 import {GreetComponent} from "./unit-tests/greet/greet.component";
 import {EventEmittersComponent} from "./unit-tests/event-emitters/event-emitters.component";
 import {GreeterComponent} from './integration-tests/greeter/greeter.component';
 import {UserDetailsComponent} from './integration-tests/user-details/user-details.component';
-import {UsersComponent} from './users/users.component';
-import {HomeComponent} from './home/home.component';
-import {NotFoundComponent} from './not-found/not-found.component';
+import {UsersComponent} from './empty-components/users/users.component';
+import {HomeComponent} from './empty-components/home/home.component';
+import {NotFoundComponent} from './empty-components/not-found/not-found.component';
 import {VoterComponent} from "./integration-tests/voter/voter.component";
+import {NavComponent} from './integration-tests/nav/nav.component';
+import {HighlightDirective} from './integration-tests/directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import {VoterComponent} from "./integration-tests/voter/voter.component";
     UsersComponent,
     HomeComponent,
     NotFoundComponent,
+    NavComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,10 @@ export class TodosComponent implements OnInit {
     this.service.getTodos().subscribe((t: any[]) =>
       this.todos = t
     );
+
+    this.service.getTodosPromise().then((t: any[]) =>
+      this.todos = t
+    );
   }
 
   add() {

@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {UserDetailsComponent} from "./integration-tests/user-details/user-details.component";
-import {UsersComponent} from "./users/users.component";
-import {TodosComponent} from "./unit-tests/todos/todos.component";
-import {HomeComponent} from "./home/home.component";
-import {NotFoundComponent} from "./not-found/not-found.component";
+import {UsersComponent} from "./empty-components/users/users.component";
+import {TodosComponent} from "./integration-tests/todos/todos.component";
+import {HomeComponent} from "./empty-components/home/home.component";
+import {NotFoundComponent} from "./empty-components/not-found/not-found.component";
 
 
 export const routes: Routes = [
