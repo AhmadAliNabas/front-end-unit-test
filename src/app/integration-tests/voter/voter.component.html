@@ -2,12 +2,16 @@
   <button
     (click)="upVote()"
     [class.highlighted]="myVote == 1"
-    class="vote-button vote-up-button">up Vote
+    class="vote-button vote-up-button">
+    up Vote
   </button>
+
   <span class="vote-count">{{ totalVotes }}</span>
+
   <button
     (click)="downVote()"
     [class.highlighted]="myVote == -1"
-    class="vote-button">down Vote
+    class="vote-button">
+    down Vote
   </button>
 </div>

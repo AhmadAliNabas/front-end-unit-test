@@ -8,5 +8,6 @@ describe('CurrencyComponent', () => {
     expect(arr).toContain('USD');
     expect(arr).toContain('AUD');
     expect(arr).toContain('EUR');
+    expect(arr.length).toBe(3);
   });
 });

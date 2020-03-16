@@ -1,30 +1,9 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {TodoFormComponent} from './todo-form.component';
 import {FormBuilder} from "@angular/forms";
 
 describe('TodoFormComponent', () => {
-  let component: TodoFormComponent;
-  let fixture: ComponentFixture<TodoFormComponent>;
   const formBuilder: FormBuilder = new FormBuilder();
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [TodoFormComponent],
-      providers: [
-        // reference the new instance of formBuilder from above
-        {provide: FormBuilder, useValue: formBuilder}
-      ],
-    })
-      .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TodoFormComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-
+  let component: TodoFormComponent = new TodoFormComponent(formBuilder);
 
   it('should create a from with 2 controls', () => {
     expect(component.form.contains('name')).toBeTruthy();

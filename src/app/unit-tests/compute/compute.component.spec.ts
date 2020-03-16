@@ -13,3 +13,4 @@ describe('ComputeComponent', () => {
     expect(result).toBe(6);
   });
 });
+

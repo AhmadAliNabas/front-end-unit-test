@@ -12,13 +12,15 @@ describe('GreeterComponent', () => {
 
     TestBed.configureTestingModule({
       // we are telling angular compile all the component that are declared here
-      declarations: [GreeterComponent]
+      declarations: [GreeterComponent],
+      providers: [],
+      imports: []
     })
       .compileComponents();// this method is chained with configureTestingModule
 
 
-    //Angular needs to access file system which is slow
-    //that's why it happens Asynchronously
+    // Angular needs to access file system which is slow
+    // that's why it happens Asynchronously
     // and for this reason we call async
     // async is a utility function provided by angular
   }));

@@ -32,6 +32,7 @@ describe('VoterComponent', () => {
     let debugElement = fixture.debugElement.query(By.css('.vote-count'));
     // nativeElement is of type any, we store it in variable and give it Type
     // to leverage the use of intelli-sense
+
     let nativeElement: HTMLElement = debugElement.nativeElement;
 
     expect(nativeElement.innerText).toContain('21');

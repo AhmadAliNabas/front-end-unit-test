@@ -35,6 +35,7 @@ describe('TodosComponent', () => {
     spyOn(service, 'getTodos').and.callFake(() => {
       return of(todos);
     });
+
     component.ngOnInit();
     expect(component.todos).toBe(todos);
   });

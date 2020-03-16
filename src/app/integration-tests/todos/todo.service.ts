@@ -9,7 +9,7 @@ export class TodoService {
   constructor(private http: HttpClient) {
   }
 
-  add(todo) {
+  add(todo): Observable<any> {
     return this.http.post('...', todo);
   }
 

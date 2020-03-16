@@ -7,7 +7,6 @@ import {AppComponent} from './app.component';
 import {ComputeComponent} from "./unit-tests/compute/compute.component";
 import {CurrencyComponent} from "./unit-tests/currency/currency.component";
 import {PostComponent} from "./unit-tests/post/post.component";
-import {VoteComponent} from "./unit-tests/vote/vote.component";
 import {TodosComponent} from "./integration-tests/todos/todos.component";
 import {TodoFormComponent} from "./unit-tests/todo-form/todo-form.component";
 import {GreetComponent} from "./unit-tests/greet/greet.component";
@@ -30,7 +29,6 @@ import {HighlightDirective} from './integration-tests/directives/highlight.direc
     GreetComponent,
     TodoFormComponent,
     TodosComponent,
-    VoteComponent,
     PostComponent,
     VoterComponent,
     GreeterComponent,
